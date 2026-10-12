@@ -1,0 +1,43 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+---
+<Layout title={`${post.data.title} | Pool Services Spring TX`} description={post.data.description}>
+  <section class="page-hero">
+    <div class="container">
+      <p class="blog-post-meta">
+        <time datetime={post.data.pubDate.toISOString()}>{formatDate(post.data.pubDate)}</time>
+        {post.data.author && <> · {post.data.author}</>}
+      </p>
+      <h1>{post.data.title}</h1>
+      <p>{post.data.description}</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container blog-prose">
+      <Content />
+      <hr class="blog-divider" />
+      <p class="blog-back">
+        <a href="/blog/">← Back to all posts</a>
+        &nbsp;·&nbsp;
+        <a href="/contact/">Contact us for service</a>
+      </p>
+    </div>
+  </section>
+</Layout>

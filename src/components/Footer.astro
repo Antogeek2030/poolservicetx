@@ -1,0 +1,41 @@
+---
+const phone = '+12815550199';
+const phoneDisplay = '(281) 555-0199';
+const year = new Date().getFullYear();
+---
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Pool Services Spring TX</h4>
+        <p>Professional pool cleaning, maintenance, and repair serving Spring and surrounding Harris County communities. Weekly routes, reliable technicians, satisfaction guaranteed.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <p><a href="/services/weekly-pool-cleaning/">Weekly Cleaning</a></p>
+        <p><a href="/services/pool-repair/">Pool Repair</a></p>
+        <p><a href="/services/equipment-repair/">Equipment Repair</a></p>
+        <p><a href="/services/chemical-balancing/">Chemical Balancing</a></p>
+        <p><a href="/services/algae-treatment/">Algae Treatment</a></p>
+      </div>
+      <div>
+        <h4>Common Problems</h4>
+        <p><a href="/problems/cloudy-water/">Cloudy Water</a></p>
+        <p><a href="/problems/green-algae/">Green Algae</a></p>
+        <p><a href="/problems/pump-not-working/">Pump Issues</a></p>
+        <p><a href="/problems/leaking-pool/">Leaking Pool</a></p>
+        <p><a href="/problems/dirty-filter/">Dirty Filter</a></p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href={`tel:${phone}`}>{phoneDisplay}</a></p>
+        <p>18913 Tomato St #102<br />Spring, TX 77379</p>
+        <p>Mon–Sat 7 AM – 7 PM</p>
+        <p style="margin-top:0.75rem"><a href="/service-areas/">Service Areas</a> · <a href="/blog/">Blog</a> · <a href="/about/">About</a> · <a href="/contact/">Contact</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© {year} Pool Services Spring TX. All rights reserved. | <a href="/privacy/">Privacy Policy</a></p>
+    </div>
+  </div>
+</footer>

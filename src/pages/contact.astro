@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+const phone = '+12815550199';
+const phoneDisplay = '(281) 555-0199';
+---
+<Layout title="Contact Us | Pool Services Spring TX" description="Contact Pool Services Spring TX for weekly cleaning, repairs, and quotes. Call or visit 18913 Tomato St #102, Spring, TX 77379.">
+  <section class="page-hero">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Ready for cleaner water or a repair? Reach out today.</p>
+    </div>
+  </section>
+  <section class="content-section">
+    <div class="container" style="max-width:800px">
+      <h2>Get in Touch</h2>
+      <p><strong>Phone:</strong> <a href={`tel:${phone}`}>{phoneDisplay}</a></p>
+      <p><strong>Address:</strong> 18913 Tomato St #102, Spring, TX 77379</p>
+      <p><strong>Hours:</strong> Monday – Saturday, 7:00 AM – 7:00 PM</p>
+      <h2>What to Have Ready</h2>
+      <ul>
+        <li>Your address and preferred service days</li>
+        <li>A short description of the issue (if repair or recovery)</li>
+        <li>Pool size or approximate volume if known</li>
+      </ul>
+      <p>We respond quickly to calls and will confirm availability for your neighborhood route.</p>
+      <p style="margin-top:2rem"><a href={`tel:${phone}`} class="btn btn-primary">Call Now — {phoneDisplay}</a></p>
+    </div>
+  </section>
+</Layout>

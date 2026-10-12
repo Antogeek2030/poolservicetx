@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+const phone = '+12815550199';
+const phoneDisplay = '(281) 555-0199';
+---
+<Layout title="About Us | Pool Services Spring TX" description="Local pool service company serving Spring, TX and surrounding areas. Licensed, insured, and focused on clear water and reliable care.">
+  <section class="page-hero">
+    <div class="container">
+      <h1>About Pool Services Spring TX</h1>
+      <p>Local technicians dedicated to keeping Spring pools clean, safe, and ready for family time.</p>
+    </div>
+  </section>
+  <section class="content-section">
+    <div class="container" style="max-width:800px">
+      <p>We are a local pool service company based near 18913 Tomato St in Spring, TX. Our focus is simple: consistent weekly care, honest repairs, and water chemistry that keeps your pool enjoyable all season.</p>
+      <h2>What Sets Us Apart</h2>
+      <ul>
+        <li>Route-based weekly service so you know when we will be there</li>
+        <li>Trained, insured technicians familiar with local water conditions</li>
+        <li>Upfront pricing and no-pressure recommendations</li>
+        <li>Clear communication after every visit</li>
+        <li>Priority response when something goes wrong</li>
+      </ul>
+      <h2>Serving Spring &amp; Beyond</h2>
+      <p>We proudly serve Spring (77379 and nearby zips), Klein, Champions, Tomball, and surrounding Harris County communities. Whether you need weekly maintenance or help recovering a green pool, we are ready to help.</p>
+      <p style="margin-top:2rem"><a href={`tel:${phone}`} class="btn btn-primary">Call {phoneDisplay}</a></p>
+    </div>
+  </section>
+</Layout>

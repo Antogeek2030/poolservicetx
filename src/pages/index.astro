@@ -1,0 +1,283 @@
+---
+import Layout from '../layouts/Layout.astro';
+const phone = '+12815550199';
+const phoneDisplay = '(281) 555-0199';
+---
+<Layout>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-badge">● SPRING, TX &amp; SURROUNDING AREAS · RELIABLE WEEKLY SERVICE</div>
+        <h1>POOL SERVICES<br />IN <span>SPRING</span></h1>
+        <p class="hero-sub">Crystal Clear Water. Expert Care. Weekly Routes.</p>
+        <p class="hero-desc">Keep your Spring, TX pool sparkling and safe with our professional weekly cleaning, chemical balancing, and equipment maintenance. Licensed technicians, consistent routes, and a satisfaction guarantee for every home we serve.</p>
+        <div class="hero-tags">
+          <span class="hero-tag">⏱ Weekly Routes</span>
+          <span class="hero-tag">🛡 Licensed &amp; Insured</span>
+          <span class="hero-tag">✓ Upfront Pricing</span>
+          <span class="hero-tag">💧 Chemical Experts</span>
+          <span class="hero-tag">🛡 Satisfaction Guarantee</span>
+        </div>
+        <div class="hero-ctas">
+          <a href={`tel:${phone}`} class="btn btn-primary">Schedule Service</a>
+          <a href={`tel:${phone}`} class="btn btn-outline">Get a Quote</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="hero-card-icon">🏊</div>
+          <h3>Pool Looking Cloudy?</h3>
+          <p>We restore clear, balanced water and keep your equipment running smoothly with reliable weekly care.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section class="section section-alt" id="why">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why Spring Homeowners <span>Choose Us</span></h2>
+        <p>A clean, safe pool means more family time and less stress. Our local technicians follow proven routes so your pool stays ready whenever you are.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📅</div>
+          <h3>Consistent Weekly Routes</h3>
+          <p>We visit on a regular schedule so chemicals stay balanced, filters stay clean, and small issues are caught early.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📜</div>
+          <h3>Licensed &amp; Insured</h3>
+          <p>Every technician is trained, insured, and experienced with the pumps, filters, and systems common in Spring and Harris County.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💵</div>
+          <h3>Clear, Upfront Pricing</h3>
+          <p>No surprise fees. You know the monthly rate and what is included before we start service.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📍</div>
+          <h3>Local to Spring</h3>
+          <p>Based near Tomato Street — we know the neighborhoods, water conditions, and equipment brands used across the 77379 area.</p>
+        </div>
+      </div>
+      <div class="stats-row">
+        <div class="stat-item"><strong>Weekly</strong><span>Service Routes</span></div>
+        <div class="stat-item"><strong>98%</strong><span>Customer Satisfaction</span></div>
+        <div class="stat-item"><strong>Same Day</strong><span>Repair Availability</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problems preview -->
+  <section class="section" id="problems">
+    <div class="container">
+      <div class="section-header">
+        <h2>Recognize <span>These Signs?</span></h2>
+        <p>Texas heat and hard water put extra stress on pools. If you notice any of these, we can help quickly.</p>
+      </div>
+      <div class="problems-grid">
+        <a href="/problems/cloudy-water/" class="problem-card" style="display:block">
+          <span class="problem-badge badge-urgent">Urgent</span>
+          <h3>Cloudy Water</h3>
+          <p>Murky water often means filtration or chemistry issues. Fast correction restores clarity and safety.</p>
+        </a>
+        <a href="/problems/green-algae/" class="problem-card" style="display:block">
+          <span class="problem-badge badge-urgent">Urgent</span>
+          <h3>Green Algae</h3>
+          <p>Algae blooms need shock treatment and brushing. We clear it and prevent return with proper residual chlorine.</p>
+        </a>
+        <a href="/problems/pump-not-working/" class="problem-card" style="display:block">
+          <span class="problem-badge badge-soon">Address Soon</span>
+          <h3>Pump Not Working</h3>
+          <p>No circulation leads to stagnant water fast. We diagnose motors, capacitors, and seals on the first visit.</p>
+        </a>
+        <a href="/problems/leaking-pool/" class="problem-card" style="display:block">
+          <span class="problem-badge badge-urgent">Urgent</span>
+          <h3>Leaking Pool</h3>
+          <p>Losing water? We locate the source — liner, fittings, or equipment — and stop the loss before costs climb.</p>
+        </a>
+        <a href="/problems/dirty-filter/" class="problem-card" style="display:block">
+          <span class="problem-badge badge-soon">Address Soon</span>
+          <h3>Dirty Filter</h3>
+          <p>Clogged filters reduce flow and clarity. Regular cleaning or media replacement keeps water pristine.</p>
+        </a>
+        <a href="/problems/high-chemicals/" class="problem-card" style="display:block">
+          <span class="problem-badge badge-soon">Address Soon</span>
+          <h3>High Chemical Levels</h3>
+          <p>Over-chlorinated or unbalanced water irritates skin and eyes. We rebalance safely and protect equipment.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section section-alt" id="services">
+    <div class="container">
+      <div class="section-header">
+        <h2>Expert <span>Pool Services</span></h2>
+        <p>From weekly maintenance to equipment repairs, we keep Spring pools healthy and ready for use.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <span class="service-tag">Most Popular</span>
+          <h3>Weekly Pool Cleaning</h3>
+          <p>Full service visit: skim, brush, vacuum, empty baskets, test &amp; balance chemicals, check equipment.</p>
+          <ul>
+            <li>Chemical testing &amp; dosing</li>
+            <li>Net, brush &amp; vacuum</li>
+            <li>Basket &amp; filter check</li>
+          </ul>
+          <a href="/services/weekly-pool-cleaning/">Learn More →</a>
+        </div>
+        <div class="service-card">
+          <span class="service-tag">Repair</span>
+          <h3>Pool Repair</h3>
+          <p>Structural and surface repairs so your pool stays watertight and attractive for years.</p>
+          <ul>
+            <li>Crack &amp; tile repair</li>
+            <li>Liner assessment</li>
+            <li>Honest repair vs replace</li>
+          </ul>
+          <a href="/services/pool-repair/">Learn More →</a>
+        </div>
+        <div class="service-card">
+          <span class="service-tag">Equipment</span>
+          <h3>Equipment Repair</h3>
+          <p>Pumps, filters, heaters, salt systems, and automation — diagnosed and fixed on site when possible.</p>
+          <ul>
+            <li>Pump &amp; motor service</li>
+            <li>Filter media &amp; valves</li>
+            <li>Heater diagnostics</li>
+          </ul>
+          <a href="/services/equipment-repair/">Learn More →</a>
+        </div>
+        <div class="service-card">
+          <span class="service-tag">Chemistry</span>
+          <h3>Chemical Balancing</h3>
+          <p>Precise testing and adjustment of chlorine, pH, alkalinity, calcium, and cyanuric acid.</p>
+          <ul>
+            <li>Full water analysis</li>
+            <li>Safe dosing</li>
+            <li>Prevention of scale &amp; corrosion</li>
+          </ul>
+          <a href="/services/chemical-balancing/">Learn More →</a>
+        </div>
+        <div class="service-card">
+          <span class="service-tag">Treatment</span>
+          <h3>Algae Treatment</h3>
+          <p>Green, yellow, or black algae cleared with shock, brushing, and residual maintenance.</p>
+          <ul>
+            <li>Same-week response</li>
+            <li>Brush &amp; vacuum</li>
+            <li>Follow-up residual plan</li>
+          </ul>
+          <a href="/services/algae-treatment/">Learn More →</a>
+        </div>
+        <div class="service-card">
+          <span class="service-tag">Detection</span>
+          <h3>Leak Detection</h3>
+          <p>Find the source of water loss quickly — equipment, plumbing, or shell — and stop the waste.</p>
+          <ul>
+            <li>Pressure testing</li>
+            <li>Dye &amp; electronic methods</li>
+            <li>Clear repair options</li>
+          </ul>
+          <a href="/services/leak-detection/">Learn More →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section" id="process">
+    <div class="container">
+      <div class="section-header">
+        <h2>How We Keep Your <span>Pool Ready</span></h2>
+        <p>A simple, transparent process from first call to ongoing care.</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step">
+          <h3>Call or Request</h3>
+          <p>Tell us about your pool and preferred schedule. We confirm availability quickly.</p>
+        </div>
+        <div class="process-step">
+          <h3>On-Site Assessment</h3>
+          <p>We inspect water, equipment, and surface condition and give a clear recommendation.</p>
+        </div>
+        <div class="process-step">
+          <h3>Service Plan</h3>
+          <p>Weekly cleaning, repairs, or a one-time recovery — priced upfront with no pressure.</p>
+        </div>
+        <div class="process-step">
+          <h3>Ongoing Care</h3>
+          <p>Reliable visits, communication after each service, and priority for any urgent issues.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section class="section map-section" id="location">
+    <div class="container">
+      <div class="section-header">
+        <h2>Find Us in <span>Spring, TX</span></h2>
+        <p>Proudly serving Spring and nearby communities from 18913 Tomato St #102.</p>
+      </div>
+      <div class="map-embed">
+        <iframe
+          title="Map of 18913 Tomato St, Spring, TX"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-95.55%2C30.02%2C-95.51%2C30.06&amp;layer=mapnik&amp;marker=30.03966%2C-95.53305"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <p style="text-align:center;margin-top:1rem;color:var(--text-muted)">
+        📍 18913 Tomato St #102, Spring, TX 77379 · Serving Spring · Klein · Champions · Tomball and surrounding areas
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready for a Cleaner Pool?</h2>
+      <p>Whether you need weekly maintenance or help with a green or cloudy pool, our Spring team is ready to help.</p>
+      <a href={`tel:${phone}`} class="btn btn-primary">Call Now — {phoneDisplay}</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <h2>Pool Service <span>Questions</span></h2>
+        <p>Real answers Spring homeowners ask most.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3>How often should my pool be serviced?</h3>
+          <p>Most Spring pools benefit from weekly service during the swimming season. In cooler months, bi-weekly is often sufficient. Consistent chemistry and filtration prevent costly problems.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What is included in weekly pool cleaning?</h3>
+          <p>We skim debris, brush walls and steps, vacuum, empty skimmer and pump baskets, test and balance chemicals, check equipment operation, and note any issues that need attention.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Do you repair pumps and filters?</h3>
+          <p>Yes. We service pumps, motors, filters, heaters, salt chlorine generators, and automation systems from major brands. Many repairs are completed on the first visit.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Are you licensed and insured in Texas?</h3>
+          <p>Yes. All work is performed by trained, insured technicians familiar with local water conditions and equipment common in the Spring and Houston metro area.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How quickly can you respond to a green or cloudy pool?</h3>
+          <p>We prioritize recovery calls and can often begin treatment within a few days. Severe algae may require multiple visits; we give a realistic timeline and price before starting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

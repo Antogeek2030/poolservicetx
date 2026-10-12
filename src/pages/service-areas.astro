@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+const phone = '+12815550199';
+const phoneDisplay = '(281) 555-0199';
+---
+<Layout title="Service Areas | Pool Services Spring TX" description="Pool cleaning and repair service areas: Spring, Klein, Champions, Tomball, and surrounding Harris County communities.">
+  <section class="page-hero">
+    <div class="container">
+      <h1>Service Areas</h1>
+      <p>Weekly routes and repair service across Spring and nearby communities.</p>
+    </div>
+  </section>
+  <section class="content-section">
+    <div class="container" style="max-width:800px">
+      <p>We operate from 18913 Tomato St #102 in Spring and run efficient weekly routes so your pool stays on schedule.</p>
+      <h2>Primary Service Areas</h2>
+      <ul>
+        <li>Spring, TX (77379, 77373, 77386, 77388, 77389)</li>
+        <li>Klein</li>
+        <li>Champions / Champions Forest</li>
+        <li>Tomball</li>
+        <li>The Woodlands (select areas)</li>
+        <li>Nearby Harris County neighborhoods</li>
+      </ul>
+      <h2>Not Sure If We Cover You?</h2>
+      <p>Call <a href={`tel:${phone}`}>{phoneDisplay}</a> with your address. If we can add you to a route we will let you know the next available start date and monthly rate.</p>
+      <p style="margin-top:2rem"><a href={`tel:${phone}`} class="btn btn-primary">Check Availability</a></p>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,51 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+---
+<Layout
+  title="Pool Care Blog | Tips for Spring, TX Pool Owners"
+  description="Practical pool maintenance tips, algae prevention, equipment advice, and water chemistry guides for Spring, TX homeowners."
+>
+  <section class="page-hero">
+    <div class="container">
+      <h1>Pool Care Blog</h1>
+      <p>Practical tips to keep your Spring pool clear, safe, and low-maintenance.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="blog-grid">
+        {posts.map((post) => (
+          <article class="blog-card">
+            <div class="blog-card-meta">
+              <time datetime={post.data.pubDate.toISOString()}>{formatDate(post.data.pubDate)}</time>
+              {post.data.tags.length > 0 && (
+                <span class="blog-tags">
+                  {post.data.tags.slice(0, 2).map((tag) => (
+                    <span class="blog-tag">{tag}</span>
+                  ))}
+                </span>
+              )}
+            </div>
+            <h2>
+              <a href={`/blog/${post.id}/`}>{post.data.title}</a>
+            </h2>
+            <p>{post.data.description}</p>
+            <a href={`/blog/${post.id}/`} class="blog-read-more">Read more →</a>
+          </article>
+        ))}
+      </div>
+      {posts.length === 0 && (
+        <p style="text-align:center;color:var(--text-muted)">No posts yet. Check back soon.</p>
+      )}
+    </div>
+  </section>
+</Layout>

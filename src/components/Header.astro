@@ -1,0 +1,77 @@
+---
+const phone = '+12815550199';
+const phoneDisplay = '(281) 555-0199';
+const currentPath = Astro.url.pathname;
+---
+<header class="header">
+  <div class="container header-inner">
+    <a href="/" class="logo">
+      <span class="logo-icon">🏊</span>
+      <span class="logo-text">Pool Services<br /><small>Spring, TX</small></span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="/" class={currentPath === '/' ? 'active' : ''}>Home</a>
+
+      <div class="dropdown">
+        <button class="dropdown-toggle" aria-expanded="false">Our Services <span class="caret">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/services/weekly-pool-cleaning/">Weekly Pool Cleaning</a>
+          <a href="/services/pool-repair/">Pool Repair</a>
+          <a href="/services/equipment-repair/">Equipment Repair</a>
+          <a href="/services/chemical-balancing/">Chemical Balancing</a>
+          <a href="/services/algae-treatment/">Algae Treatment</a>
+          <a href="/services/leak-detection/">Leak Detection</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropdown-toggle" aria-expanded="false">Problems <span class="caret">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/problems/cloudy-water/">Cloudy Water</a>
+          <a href="/problems/green-algae/">Green Algae</a>
+          <a href="/problems/pump-not-working/">Pump Not Working</a>
+          <a href="/problems/leaking-pool/">Leaking Pool</a>
+          <a href="/problems/dirty-filter/">Dirty Filter</a>
+          <a href="/problems/high-chemicals/">High Chemical Levels</a>
+        </div>
+      </div>
+
+      <a href="/service-areas/">Service Areas</a>
+      <a href="/blog/" class={currentPath.startsWith('/blog') ? 'active' : ''}>Blog</a>
+      <a href="/about/">About Us</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+
+    <a href={`tel:${phone}`} class="header-phone">
+      <span>📞</span>
+      <span class="phone-text">{phoneDisplay}</span>
+    </a>
+    <button class="mobile-toggle" id="menuBtn" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<script>
+  // Mobile menu
+  const btn = document.getElementById('menuBtn');
+  const nav = document.getElementById('nav');
+  btn?.addEventListener('click', () => nav?.classList.toggle('open'));
+
+  // Dropdowns (click on mobile, hover on desktop handled by CSS)
+  document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      const parent = toggle.closest('.dropdown');
+      const isOpen = parent?.classList.contains('open');
+      document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+      if (!isOpen) parent?.classList.add('open');
+    });
+  });
+
+  // Close dropdowns when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!(e.target as Element).closest('.dropdown')) {
+      document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+    }
+  });
+</script>
